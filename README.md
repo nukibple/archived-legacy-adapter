@@ -59,16 +59,6 @@ sudo ./install.sh          # 装依赖 + 部署 systemd 服务（见 docs/03-Lin
 | `linux/mm-panel.service` | systemd 单元（`User=arch`，`SupplementaryGroups=input`） |
 | `docs/` | 架构、双端部署、校准、故障排查 |
 
-## 已验证
-
-| 项 | 结果 |
-|---|---|
-| 游戏自检 `タッチセンサ(1P)` | `GOOD CHECK` |
-| 登录 | MuNET 在线（`110.40.128.13:84`），读 `DEVICE\aime.txt` 卡号登录成功 |
-| 串流 | 1080×1920@60 HEVC ~50 Mbps，VAAPI 硬解 |
-| 网络 | TCP 下行 526 Mbps、10 分钟 soak 平均 519.8 Mbps、UDP 150 Mbps 零丢包 |
-| 实战 | 已能正常打歌（EXPERT Lv.12，combo 正常） |
-
 ## 许可证
 
 本项目代码 MIT，见 [LICENSE](LICENSE)。

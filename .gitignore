@@ -5,3 +5,5 @@ __pycache__/
 *.bak2
 *.png
 !linux/color_exp_panel.png
+
+push.ps1
