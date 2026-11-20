@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.log
+*.bak
+*.bak2
+*.png
+!linux/color_exp_panel.png
