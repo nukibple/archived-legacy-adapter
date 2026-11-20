@@ -9,7 +9,7 @@ Windows 主机跑游戏 → Sunshine 串流到 Linux → Linux 的触屏按压�
 │ maimai DX (Sinmai / SDEZ)                    │          │ Moonlight 全屏串流            │
 │ Sunshine ── NVENC HEVC 1080x1920@60 ────────┼─────────▶│ 竖屏显示                      │
 │                                              │          │                              │
-│ mm_bridge.py ─ COM2 ⇄ VSPD ⇄ COM1 ─ 游戏      │◀─────────│ mm_panel.py（独占触屏）        │
+│ mm_bridge.py ─ COM2 ⇄ 串口对 ⇄ COM1 ─ 游戏    │◀─────────│ mm_panel.py（独占触屏）        │
 │ hud_win.py   （分区状态 HUD，随串流显示）      │ TCP 23333│ 极坐标 → 34 分区 → 9 字节帧    │
 └──────────────────────────────────────────────┘          └──────────────────────────────┘
 ```
@@ -29,7 +29,7 @@ moonlight 把触屏动作当鼠标发回主机，而 maimai 需要的是「在�
 
 ### Windows 主机
 
-1. 装 **VSPD**（或 com0com），建一对虚拟串口 `COM1 ⇄ COM2`
+1. 装一款**虚拟串口软件**（需要能创建成对互通的两个端口），把 `COM1 ⇄ COM2` 配成一对
 2. 装 **Sunshine**，服务 `SunshineService`
 3. 游戏配置（`Package\` 下）：
    * `mai2.ini` → `DummyTouchPanel=0`

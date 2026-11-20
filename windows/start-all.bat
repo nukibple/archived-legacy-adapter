@@ -4,11 +4,11 @@ title maimai DX 一键启动 (Windows 主机)
 cd /d "%~dp0"
 
 echo ============================================
-echo   1) 检查虚拟串口对 (VSPD COM1 <-> COM2)
+echo   1) 检查虚拟串口对 (COM1 <-> COM2)
 echo ============================================
 python -c "from serial.tools import list_ports; ps=[p.device for p in list_ports.comports()]; print('ports:', ps); import sys; sys.exit(0 if ('COM1' in ps and 'COM2' in ps) else 1)"
 if errorlevel 1 (
-    echo [!] 没找到 COM1/COM2，请在 VSPD Pro 里建一对 COM1 - COM2
+    echo [!] 没找到 COM1/COM2，请用虚拟串口软件建一对 COM1 - COM2
     pause
     exit /b 1
 )

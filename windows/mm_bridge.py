@@ -359,7 +359,7 @@ def main():
         ser = serial.Serial(args.com, args.baud, timeout=0.02)
     except Exception as e:  # noqa: BLE001
         sys.exit(f"打开 {args.com} 失败: {e}\n"
-                 f"  → 需要先用 VSPD/com0com 建一对虚拟串口（例如 COM3 <-> COM33），"
+                 f"  → 需要先用虚拟串口软件建一对互通端口（例如 COM3 <-> COM33），"
                  f"本程序和游戏各占一端。")
 
     br = Bridge(ser, port=args.port, write_hz=args.hz, echo=not args.no_echo)

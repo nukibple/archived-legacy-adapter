@@ -21,7 +21,7 @@
 * License: MIT
 * 用途：
   * 串口侧的完整实现参考（`SerialManager` 的读 6 字节 / 回写 `[40,d1,d2,d3,d4,41]` / 写线程刷帧节奏）
-  * 「VSPD 建一对虚拟串口（脚本占一端、游戏占另一端）」的部署范式
+  * 「用虚拟串口软件建一对端口：脚本占一端、游戏占另一端」的部署范式
   * `COM_PORT = "COM33"` 与游戏读 `COM3` 的配对约定
 
 ## 运行环境依赖
@@ -33,7 +33,6 @@
 | [MuNET-OSS/AquaMai](https://github.com/MuNET-OSS/AquaMai) | 2.6 | 游戏侧 mod 框架，本项目使用其中：<br>`TouchPanelPort`（改触摸板串口号）<br>`TouchToButtonInput`（菜单里分区=按键，长按 C1/C2=Select）<br>`DisplayTouchInGame`（游戏内触摸可视化） |
 | [MuNET](https://www.mumur.net) | play.mumur.net / aime.mumur.net | 对战服务器与 AimeDB |
 | [iptsd](https://github.com/linux-surface/iptsd) + [linux-surface](https://github.com/linux-surface/linux-surface) | 3.1.1 | Surface IPTS 触屏驱动，暴露 `IPTSD Virtual Touchscreen`（MT-B） |
-| [Eltima VSPD Pro](https://www.eltima.com/products/vspd/) | 10.0.858 | 主机端虚拟串口对（**闭源商业软件**，仅作为依赖说明，本仓库不含其任何文件） |
 | [PyQt6](https://pypi.org/project/PyQt6/) / [python-evdev](https://github.com/gvalkov/python-evdev) / [Pillow](https://python-pillow.org/) / [pyserial](https://github.com/pyserial/pyserial) | — | 校准器/HUD/取点/串口 |
 
 ## 与本项目的差异（为什么不是直接 fork）
